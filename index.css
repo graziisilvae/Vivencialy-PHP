@@ -1,0 +1,12 @@
+body{
+    margin: 0px;
+}
+
+.banner{
+    display: flex;
+    margin: 50px;
+    background-color: aqua;
+    width: 1780px;
+    height: 380px;
+    margin-top: 150px;
+}
