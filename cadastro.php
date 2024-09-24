@@ -1,42 +1,3 @@
-<?php
-
-// Verificar se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Capturar e limpar os dados do formulário
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $data_nascimento = $_POST['data_nascimento'];
-    $genero = $_POST['genero'];
-    $biografia = $_POST['biografia'];
-
-    // Preparar a consulta SQL para inserir os dados
-    $sql = "INSERT INTO CADASTRO (nome, email, data_nascimento, genero, biografia) 
-            VALUES (?, ?, ?, ?, ?)";
-
-    // Preparar a declaração
-    $stmt = $conn->prepare($sql);
-
-    // Verificar se a preparação foi bem-sucedida
-    if ($stmt === false) {
-        die("Erro na preparação da consulta: " . $conn->error);
-    }
-
-    // Bind os parâmetros
-    $stmt->bind_param("sssss", $nome, $email, $data_nascimento, $genero, $biografia);
-
-    // Executar a consulta
-    if ($stmt->execute()) {
-        $message = "Cadastro realizado com sucesso!";
-    } else {
-        $message = "Erro ao realizar o cadastro: " . $stmt->error;
-    }
-
-    // Fechar a declaração
-    $stmt->close();
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -44,21 +5,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="cadastro.css"> 
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
-
-<nav class="navbar">
-    <ul>
-        <li><a href="/LOJAJOIAS/index.php">Início</a></li>
-        <li><a href="/LOJAJOIAS/cadastro.php">Cadastro</a></li>
-    </ul>
-</nav>
-
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/GRAJU/index.php">Início</a></li>
+            <li><a href="/GRAJU/cadastro.php">Cadastro</a></li>
+        </ul>
+    </nav>
 
-    <h1>Formulário de Cadastro</h1>
-    
-    <!-- Mostrar a mensagem de resultado se estiver definida -->
+    <h1 class="poppins-medium">Formulário de Cadastro</h1>
+
     <?php if (isset($message)): ?>
         <p><?php echo htmlspecialchars($message); ?></p>
     <?php endif; ?>
@@ -85,10 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Cadastrar">
     </form>
+
+    <footer class="footer">
+        <p class="poppins-medium">&copy; 2024 ViVeNcIaLY. Todos os direitos reservados.</p>
+    </footer>
 </body>
-
-<footer class="footer">
-    <p>&copy; 2024 Loja de Joias. Todos os direitos reservados.</p>
-</footer>
-
 </html>

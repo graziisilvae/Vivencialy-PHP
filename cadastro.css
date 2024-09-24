@@ -1,39 +1,4 @@
-/* CORPO DO FORMULARIO */
-
-/* Estilos gerais da navbar */
-.navbar {
-    background-color:#ff7777; /* Cor de fundo da navbar */
-    border-bottom: 2px solid #ffdede; /* Borda inferior da navbar */
-    padding: 13px 25px; /* Espaçamento interno da navbar */
-    width: 100%; 
-    height: 25px;
-    display: flex;
-}
-
-/* Estilos para a lista dentro da navbar */
-.navbar ul {
-    list-style: none; /* Remove os marcadores da lista */
-    margin: 0; /* Remove margens externas */
-    padding: 0; /* Remove espaçamento interno */
-    display: flex; /* Usa flexbox para alinhar os itens */
-    margin-left: 1600px;
-}
-
-/* Estilos para cada item da lista */
-.navbar li {
-    margin-left: 10px; /* Espaçamento entre os itens da lista */
-}
-
-/* Estilos para os links dentro dos itens da lista */
-.navbar a {
-    color: rgb(255, 255, 255); /* Cor do texto dos links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    padding: 8px 12px; /* Espaçamento interno dos links */
-    border-radius: 4px; /* Bordas arredondadas dos links */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
-}
-
-
+/* NAVBAR E FOOTER */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -43,6 +8,34 @@ body {
     flex-direction: column; 
     align-items: center; 
     min-height: 100vh; 
+}
+
+.navbar {
+    background-color: #ec8f8c; 
+    border-bottom: 2px solid #ffdede; /* Borda inferior da navbar */
+    padding: 13px 25px; 
+    position: relative; 
+    z-index: 10; /* Garante que fique acima do background */
+}
+.navbar ul {
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    margin-left: 1200px;
+}
+
+.navbar li {
+    margin-left: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.navbar a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
 
 h1 {
     margin-top: 20px; 
@@ -73,7 +66,7 @@ input, select, textarea {
 }
 
 input[type="submit"] {
-    background-color: #ff7777;
+    background-color: #ec8f8c; 
     color: white;
     border: none;
     cursor: pointer;
@@ -81,16 +74,69 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #ff9999; 
+    background-color: #ec8f8c; 
 }
 
-footer {
-    background-color:#ff7777;
+.footer {
+    background-color: #FAF4F0; /* Cor de fundo do footer */
     width: 100%; 
-    height: 60px;
+    height: 60px; /* Altura do footer */
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin-top: 30px; 
+    margin-top: 60px; 
 }
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500; 
+    font-style: normal; 
+}
+
+/* Banners e texto */
+.banners-container {
+    display: flex;
+    justify-content: center; /* Centraliza os banners horizontalmente */
+    gap: 20px; /* Espaçamento entre os banners */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+}
+
+.banner {
+    flex: 1; /* Faz os banners ocuparem a mesma largura */
+    max-width: 300px; /* Largura máxima para cada banner */
+    background-color: rgb(255, 235, 223); /* Cor de fundo */
+    border-radius: 25px; /* Bordas arredondadas */
+    overflow: hidden; /* Para evitar que a imagem extrapole */
+    display: flex; /* Permite empilhar imagem e texto */
+    flex-direction: column; /* Coloca a imagem em cima e o texto embaixo */
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.banner img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do banner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços embaixo da imagem */
+}
+
+.banner-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400; /* Peso normal */
+    font-size: 18px; /* Tamanho do texto */
+    margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+    margin-bottom: 10px; /* Espaçamento inferior, se necessário */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* FONTES */
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: -20px;
 }
