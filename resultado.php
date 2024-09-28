@@ -1,11 +1,11 @@
 <?php
-// Função para validar se o nome contém ao menos dois nomes
+
 function validarNome($nome) {
     $nomes = explode(' ', trim($nome));
     return count($nomes) >= 2;
 }
 
-// Inicializa variáveis
+
 $message = '';
 $nome = '';
 $email = '';
@@ -13,7 +13,7 @@ $data_nascimento = '';
 $genero = '';
 $biografia = '';
 
-// Verifica se o formulário foi enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = trim($_POST["nome"]);
     $email = trim($_POST["email"]);
@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $biografia = trim($_POST["biografia"]);
 
-    // Inicializa um array para armazenar mensagens de erro
+
     $erros = [];
 
-    // Valida os campos
+
     if (empty($nome) || !validarNome($nome)) {
         $erros[] = "O nome deve conter mais de uma palavra.";
     }
@@ -41,14 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erros[] = "A biografia é obrigatória.";
     }
 
-    // Se houver erros, exibe-os
+
     if (!empty($erros)) {
         foreach ($erros as $erro) {
             $message .= "<p>$erro</p>";
         }
     } else {
-        // Aqui você deve inserir no banco de dados (se estiver usando um)
-        // Simulando inserção com sucesso
+       
         $message = "Cadastro realizado com sucesso!";
     }
 }
@@ -72,7 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .navbar {
-            background-color: #ec8f8c;
+            background-color: #ec8f8c
+            ;
             color: #fff;
             padding: 10px 20px;
         }
@@ -104,9 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .footer {
-        background-color: #FAF4F0; /* Cor de fundo do footer */
+        background-color: #FAF4F0; 
         width: 100%; 
-        height: 60px; /* Altura do footer */
+        height: 60px; 
         display: flex;
         justify-content: center; 
         align-items: center; 
