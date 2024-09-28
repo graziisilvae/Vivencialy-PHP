@@ -1,6 +1,4 @@
 <?php
-include "bd.php"; // Inclui o arquivo de conexão
-
 
 // Função para validar se o nome contém ao menos dois nomes
 function validarNome($nome) {
@@ -71,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
 
 
-        echo "<script>window.location.href = 'index.php';</script>"; // Altere 'index.php' para o caminho correto do seu formulário
+        echo "<script>window.location.href = 'cadastro.php';</script>"; // Altere 'index.php' para o caminho correto do seu formulário
     }
 }
 ?>

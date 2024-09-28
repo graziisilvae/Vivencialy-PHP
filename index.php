@@ -17,8 +17,8 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a class="poppins-medium" href="/GRAJU/index.php">Início</a></li>
-            <li><a class="poppins-medium" href="/GRAJU/cadastro.php">Cadastro</a></li>
+            <li><a class="poppins-medium" href="/VIVENCIALY-PHP/index.php">Início</a></li>
+            <li><a class="poppins-medium" href="/VIVENCIALY-PHP/cadastro.php">Cadastro</a></li>
         </ul>
     </nav>
 

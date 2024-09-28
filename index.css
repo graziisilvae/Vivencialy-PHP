@@ -4,6 +4,8 @@ body {
 }
 
 .navbar {
+    display: flex;
+    flex-wrap: wrap ;
     background-color: #ec8f8c; 
     border-bottom: 2px solid #ffdede; /* Borda inferior da navbar */
     padding: 13px 25px; 
@@ -42,7 +44,7 @@ body {
     display: flex;
     justify-content: center; /* Centraliza os banners horizontalmente */
     gap: 20px; /* Espaçamento entre os banners */
-    margin: 20px 0; /* Espaçamento superior e inferior */
+    margin: 40px 0; /* Espaçamento superior e inferior */
 }
 
 .banner {
@@ -54,12 +56,13 @@ body {
     display: flex; /* Permite empilhar imagem e texto */
     flex-direction: column; /* Coloca a imagem em cima e o texto embaixo */
     align-items: center; /* Centraliza o conteúdo */
+    margin-bottom: 250px;
 }
 
 .banner img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do banner */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaços embaixo da imagem */
+    width: 100%;
+    height: auto; 
+    display: block; 
 }
 
 .banner-text {
@@ -98,5 +101,5 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin-top: 60px; 
+    margin-top: 30px; 
 }

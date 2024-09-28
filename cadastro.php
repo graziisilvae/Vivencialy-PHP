@@ -12,8 +12,8 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="/GRAJU/index.php">Início</a></li>
-            <li><a href="/GRAJU/cadastro.php">Cadastro</a></li>
+            <li><a href="/VIVENCIALY-PHP/index.php">Início</a></li>
+            <li><a href="/VIVENCIALY-PHP/cadastro.php">Cadastro</a></li>
         </ul>
     </nav>
 
@@ -23,7 +23,7 @@
         <p><?php echo htmlspecialchars($message); ?></p>
     <?php endif; ?>
 
-    <form action="index.php" method="POST">
+    <form action="resultado.php" method="POST">
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" name="nome" required><br><br>
 
